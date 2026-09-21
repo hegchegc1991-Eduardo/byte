@@ -1,0 +1,142 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Byte</title>
+
+    <!-- =========================================
+         VISTA PREVIA PARA WHATSAPP Y REDES SOCIALES
+         ========================================= -->
+
+    <meta property="og:title" content="Byte">
+
+    <meta property="og:description"
+          content="Acceso a la plataforma Byte">
+
+    <meta property="og:type" content="website">
+
+    <!-- REEMPLAZAR ESTA URL POR LA DE TU REPOSITORIO -->
+    <meta property="og:image"
+          content="https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/logo.png">
+
+    <meta property="og:image:type" content="image/png">
+
+    <meta property="og:image:width" content="1200">
+
+    <meta property="og:image:height" content="630">
+
+
+    <!-- =========================================
+         VISTA PREVIA PARA FACEBOOK / X
+         ========================================= -->
+
+    <meta name="twitter:card"
+          content="summary_large_image">
+
+    <meta name="twitter:title"
+          content="Byte">
+
+    <meta name="twitter:description"
+          content="Acceso a la plataforma Byte">
+
+    <meta name="twitter:image"
+          content="https://raw.githubusercontent.com/TU_USUARIO/TU_REPOSITORIO/main/logo.png">
+
+
+    <!-- =========================================
+         DISEÑO
+         ========================================= -->
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background: #ffffff;
+
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .contenedor {
+            text-align: center;
+        }
+
+        .logo {
+            width: 130px;
+            max-width: 40vw;
+            height: auto;
+        }
+
+        .mensaje {
+            margin-top: 20px;
+
+            font-size: 16px;
+
+            color: #555555;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class="contenedor">
+
+        <!-- Logo -->
+        <img
+            src="logo.png"
+            class="logo"
+            alt="Byte">
+
+        <div class="mensaje">
+            Cargando...
+        </div>
+
+    </div>
+
+
+    <!-- =========================================
+         REDIRECCIÓN A GOOGLE APPS SCRIPT
+         ========================================= -->
+
+    <script>
+
+        const destino =
+        "https://script.google.com/macros/s/AKfycbylZvMxppgj-OwqGoKSfIVeHvnTEUG6AziwQh4QYimdiwjmzrIG_j_nrkabMKrsKuFrjA/exec";
+
+        /*
+         * Esperamos un instante para permitir
+         * que cargue la página antes de redirigir.
+         */
+
+        setTimeout(function () {
+
+            window.location.href = destino;
+
+        }, 500);
+
+    </script>
+
+</body>
+</html>
+```
