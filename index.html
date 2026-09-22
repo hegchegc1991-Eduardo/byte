@@ -1,0 +1,112 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Byte</title>
+
+    <!-- Vista previa para WhatsApp, Facebook, Telegram, etc. -->
+    <meta property="og:title" content="Byte">
+    <meta property="og:description" content="Acceso a Byte">
+    <meta property="og:image"
+          content="https://TU-USUARIO.github.io/TU-REPOSITORIO/logo.png">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter / otras plataformas -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Byte">
+    <meta name="twitter:description" content="Acceso a Byte">
+    <meta name="twitter:image"
+          content="https://TU-USUARIO.github.io/TU-REPOSITORIO/logo.png">
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .contenedor {
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            max-width: 40vw;
+            height: auto;
+        }
+
+        .mensaje {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contenedor">
+        <img src="logo.png" alt="Byte" class="logo">
+        <div class="mensaje">Cargando...</div>
+    </div>
+
+    <script>
+
+        const destino =
+        "https://script.google.com/macros/s/AKfycbyskbfBM_FDZkSBGJ4UB8J00Cyzs8TvcRVb5AGqoqTH5q5uBPqHcWTfNi1Vr0B8Rf-F/exec";
+
+        // Solicitar ubicación al usuario
+        function solicitarUbicacion() {
+
+            if (!navigator.geolocation) {
+                // Si el navegador no soporta ubicación,
+                // redirigir igualmente.
+                window.location.href = destino;
+                return;
+            }
+
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+
+                    // Ubicación obtenida correctamente.
+                    // El navegador ya concedió el permiso
+                    // para esta página.
+
+                    window.location.href = destino;
+
+                },
+                function(error) {
+
+                    // Si el usuario rechaza el permiso
+                    // o existe algún error, redirigir igualmente.
+
+                    window.location.href = destino;
+
+                },
+                {
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 0
+                }
+            );
+        }
+
+        // Ejecutar al cargar la página
+        window.onload = solicitarUbicacion;
+
+    </script>
+
+</body>
+</html>
+```
