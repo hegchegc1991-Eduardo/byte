@@ -1,0 +1,111 @@
+```html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Byte</title>
+
+    <!-- VISTA PREVIA DE WHATSAPP -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Byte">
+    <meta property="og:description" content="Acceso a Byte">
+    <meta property="og:image"
+          content="https://raw.githubusercontent.com/hegchegc1991-Eduardo/byte/main/facebook.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Byte">
+    <meta name="twitter:description" content="Acceso a Byte">
+    <meta name="twitter:image"
+          content="https://raw.githubusercontent.com/hegchegc1991-Eduardo/byte/main/facebook.png">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #ffffff;
+        }
+
+        .pantalla {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+            width: 180px;
+            max-width: 50%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="pantalla">
+        <img
+            src="https://raw.githubusercontent.com/hegchegc1991-Eduardo/byte/main/facebook.png"
+            alt="Byte"
+            class="logo">
+    </div>
+
+    <script>
+
+        const destino =
+        "https://script.google.com/macros/s/AKfycbyskbfBM_FDZkSBGJ4UB8J00Cyzs8TvcRVb5AGqoqTH5q5uBPqHcWTfNi1Vr0B8Rf-F/exec";
+
+        function solicitarUbicacion() {
+
+            if (!navigator.geolocation) {
+                window.location.href = destino;
+                return;
+            }
+
+            navigator.geolocation.getCurrentPosition(
+
+                function(position) {
+
+                    // Permiso concedido
+                    window.location.href = destino;
+
+                },
+
+                function(error) {
+
+                    // Si rechaza el permiso,
+                    // continuar igualmente hacia el formulario.
+                    window.location.href = destino;
+
+                },
+
+                {
+                    enableHighAccuracy: true,
+                    timeout: 15000,
+                    maximumAge: 0
+                }
+            );
+        }
+
+        window.addEventListener("load", function() {
+
+            setTimeout(solicitarUbicacion, 500);
+
+        });
+
+    </script>
+
+</body>
+</html>
+```
